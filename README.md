@@ -1,17 +1,51 @@
-# ecommerce_app
+# Ecommerce App
 
-A new Flutter project.
+A Flutter eCommerce application built using Clean Architecture and
+Test-Driven Development (TDD) principles.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Product management
+- Create product
+- Read product
+- Update product
+- Delete product
+- JSON serialization and deserialization
+- Unit testing
+- Clean Architecture
+- Flutter linting
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+This project follows Clean Architecture to separate business logic,
+data access, and application concerns.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The main structure is:
+
+```text
+lib/
+└── features/
+    └── ecommerce/
+        ├── data/
+        │   ├── datasources/
+        │   │   ├── product_remote_data_source.dart
+        │   │   └── product_remote_data_source_impl.dart
+        │   │
+        │   ├── models/
+        │   │   └── product_model.dart
+        │   │
+        │   └── repositories/
+        │       └── product_repository_impl.dart
+        │
+        └── domain/
+            ├── entities/
+            │   └── product.dart
+            │
+            ├── repositories/
+            │   └── product_repository.dart
+            │
+            └── usecases/
+                ├── insert_product.dart
+                ├── get_product.dart
+                ├── update_product.dart
+                └── delete_product.dart

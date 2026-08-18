@@ -1,7 +1,8 @@
-import 'package:ecommerce_app/features/products/domain/entities/product.dart';
-import 'package:ecommerce_app/features/products/domain/repositories/product_repository.dart';
-import 'package:ecommerce_app/features/products/domain/usecases/update_product.dart';
+import 'package:ecommerce_app/features/ecommerce/domain/entities/product.dart';
+import 'package:ecommerce_app/features/ecommerce/domain/repositories/product_repository.dart';
+import 'package:ecommerce_app/features/ecommerce/domain/usecases/update_product.dart';
 import 'package:flutter_test/flutter_test.dart';
+
 class FakeProductRepository implements ProductRepository {
   Product? updatedProduct;
 
